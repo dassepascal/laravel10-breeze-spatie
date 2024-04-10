@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mx-auto mt-5">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1">
             <div class="col-span-full">
 

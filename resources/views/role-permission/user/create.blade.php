@@ -1,3 +1,4 @@
+<x-app-layout>
 <div class="container mx-auto mt-5">
     <div class="grid grid-cols-1">
         <div class="col-span-1">
@@ -46,3 +47,4 @@
         </div>
     </div>
 </div>
+</x-app-layout>
