@@ -13,6 +13,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        {{-- style --}}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {{-- script --}}
     </head>
     <body id="app" class="font-sans antialiased">
         <div class="">

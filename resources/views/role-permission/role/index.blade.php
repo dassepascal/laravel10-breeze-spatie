@@ -4,9 +4,9 @@
             {{ __('Manage Roles') }}
         </h2>
     </x-slot>
-    <div class="py-12">
+    <div class="container mx-auto mt-5 py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="container mx-auto mt-5 py-12 ">
+
                 <div class="flex space-x-1">
                     <a href="{{ url('roles') }}"
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Roles</a>
@@ -14,25 +14,25 @@
                         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Permissions</a>
                     <a href="{{ url('users') }}"
                         class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">Users</a>
-                </div>
-            </div>
 
+            </div>
+        </div>
 
 
             <div class="overflow-x-auto mt-6">
                 @if (session('status'))
                 <div class="bg-green-500 text-white font-bold rounded-t px-4 py-2">{{ session('status') }}</div>
-            @endif
-            <div class="flex justify-around items-center mb-4">
+                @endif
+                <div class="flex justify-around items-center mb-4">
                 <h4 class="text-lg font-semibold">Roles</h4>
                     @can('create role')
                     <a href="{{ url('roles/create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-right">Add Role</a>
                     @endcan
-            </div>
-            <div class="p-4">
+                </div>
+                <div class="p-4">
                 <table class="table-auto border-collapse w-full">
                     <thead>
-                        <tr>
+                        <tr class="bg-gray-300">
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Id</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
@@ -59,7 +59,7 @@
                     </tbody>
                 </table>
             </div>
-            </div>
+          
             {{-- <div id="pagination" class="w-full flex justify-center border-t border-gray-100 pt-4 items-center">
 
                 <svg class="h-6 w-6" width="24" height="24" viewBox="0 0 24 24" fill="none"
