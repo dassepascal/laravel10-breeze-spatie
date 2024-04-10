@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="container mx-auto mt-5 overflow-x-scroll">
+    <div class="container mx-auto mt-5 overflow-x-scroll py-12">
         <div class="grid grid-cols-1">
             <div class="col-span-12">
 

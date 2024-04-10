@@ -1,13 +1,20 @@
 <x-app-layout>
-<div class="container mx-auto mt-5">
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Manage user') }}
+        </h2>
+    </x-slot>
+<div class="container mx-auto mt-5 py-12">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <a href="{{ url('roles') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-1">Roles</a>
     <a href="{{ url('permissions') }}" class="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mx-1">Permissions</a>
     <a href="{{ url('users') }}" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mx-1">Users</a>
 </div>
-
-<div class="container mx-auto mt-2">
+</div>
+ <div class="container mx-auto mt-2">
+    {{-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1">
-        <div class="col-span-1">
+        <div class="col-span-1"> --}}
 
             @if (session('status'))
                 <div class="bg-green-500 text-white font-bold rounded-lg p-4 mb-4">{{ session('status') }}</div>
@@ -20,7 +27,7 @@
                         <a href="{{ url('users/create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-right">Add User</a>
                         @endcan
                 </div>
-                <table class="min-w-full divide-y divide-gray-200">
+                <table class="min-w-full divide-y divide-gray-200 table-auto ">
                     <thead>
                         <tr>
                             <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Id</th>
@@ -56,7 +63,8 @@
                     </tbody>
                 </table>
             </div>
-        </div>
+        {{-- </div>
     </div>
+    </div> --}}
 </div>
 </x-app-layout>

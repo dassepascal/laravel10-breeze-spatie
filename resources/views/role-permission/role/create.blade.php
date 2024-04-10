@@ -1,4 +1,4 @@
-<x-app-web-layout>
+<x-app-layout>
     <div class="container mx-auto mt-5 overflow-x-scroll">
         <div class="grid grid-cols-1">
             <div class="col-span-12">
@@ -14,7 +14,7 @@
                 <div class="bg-white shadow-md rounded px-4 py-3">
                     <div class="flex justify-between items-center border-b mb-4 pb-2">
                         <h4 class="text-lg font-semibold">Create Role</h4>
-                        <a href="{{ url('roles') }}" class="btn btn-danger">Back</a>
+                        <a href="{{ url('roles') }}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Back</a>
                     </div>
                     <div class="p-4">
                         <form action="{{ url('roles') }}" method="POST">
@@ -33,4 +33,4 @@
             </div>
         </div>
     </div>
-</x-app-web-layout>
+</x-app-layout>
